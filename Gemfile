@@ -13,7 +13,7 @@ gem "sprockets-rails"
 gem "pg", "~> 1.1"
 gem 'bootstrap', '~> 5.2.0'
 gem "font-awesome-sass", "~> 6.4.2"
-
+gem 'activestorage-validator'
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 

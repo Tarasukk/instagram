@@ -22,16 +22,16 @@
           <h2 class="line-text">OR</h2>
           <div class="line m-auto"></div>
         </div>
-        <a href="#" class="d=block text-decoration-none fw-bold">
+        <a href="#" class="d=block text-decoration-none fw-bold ">
           <%= image_tag("facebook.png", class: "facebook") %>
           Log in with Facebook
         </a> 
         <% if notice %>
-          <p class="notice"><%= notice %></p>
+          <p class="text-succses my-2"><%= notice %></p>
         <% elsif alert%>
-          <p class="alert"><%= alert %></p>
+          <p class="text-danger m-2"><%= alert %></p>
         <% end %>
-        <a href="#" class="fs-6 d-block my-4 text-decoration-none">Forgot password?</a>
+        <a href="#" class="fs-6 d-block my-2 text-decoration-none">Forgot password?</a>
       </div>
     </div>
     <div class="card text-center py-2 mt-3" style="width: 23rem;">

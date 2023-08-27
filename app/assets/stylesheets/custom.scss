@@ -66,3 +66,15 @@ login-section {
 .card::-webkit-scrollbar {
   width: 0;
 }
+
+.filepond--item {
+  width: calc(50% - 0.5em);
+}
+
+.filepond--root {
+  max-height: 21em;
+}
+
+.color-red {
+  color: red;
+}
