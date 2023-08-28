@@ -1,0 +1,10 @@
+<%= turbo_frame_tag "post#{post.id}comments" do%>
+  <% if post.comments.count != 0  %>
+    <small class="text-muted">View all <%= pluralize(post.comments.count, "comment") %> </small>
+  <% end %>
+  <% post.comments.last(3).each do |comment| %>
+    <small class="d-block card-text m-0 ">
+      <span class="fw-bold me-1"><%= comment.user.username %></span><%= comment.body %>
+    </small>
+  <% end %>
+<% end %>
