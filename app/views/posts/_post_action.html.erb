@@ -3,6 +3,9 @@
     <%= button_to toggle_like_path(post_id: post.id), method: :post, style: "border:none; background:none;", id: "post#{post.id}actions-likeBtn" do %>
       <i class="fa-heart fa-xl <%= post.likes.find_by(user: current_user) ? "fa-solid color-red" : "fa-regular" %>"></i>
     <% end %>
+    <a href="#" class="td-none text-dark" data-bs-toggle="modal" data-bs-target="#post<%= post.id %>_сommentsModal">
+      <i class="fa-regular fa-comment fa-xl fa-flip-horizontal"></i>
+    </a>
   </div>
   <a href="#" class="td-none text-dark" data-bs-toggle="modal" data-bs-target="#post<%= post.id %>_likesModal">
     <small class="fw-bold my-1"><%= pluralize(post.likes.count, "like") %></small>
