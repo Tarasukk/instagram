@@ -6,7 +6,10 @@
   <% end %>
   <% post.comments.last(3).each do |comment| %>
     <small class="d-block card-text m-0 ">
-      <span class="fw-bold me-1"><%= comment.user.username %></span><%= comment.body %>
+      <%= link_to comment.user, class:"a-dicoration-none" do %>
+        <span class="fw-bold me-1"><%= comment.user.username %></span>
+      <% end %>
+      <%= comment.body %>
     </small>
   <% end %>
   <div class="modal fade" id="post<%= post.id %>_сommentsModal" tabindex="-1" aria-labelledby="post<%= post.id %>_сommentsModalLabel" aria-hidden="true">

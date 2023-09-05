@@ -3,16 +3,28 @@
     <div class="card-header bg-white">
       <div class="d-flex justify-content-between">
         <div>
-          <% if post.user.avatar.attached? %>
-            <%= image_tag post.user.avatar, class:"img-thumbnail rounded-circle", style:"width: 10%" %>
-          <% else %>
-            <%= image_tag 'd-avatar1.png', class:"img-thumbnail rounded-circle", style:"width: 10%" %>
+          <%= link_to post.user, class:"a-dicoration-none" do %>
+            <% if post.user.avatar.attached? %>
+              <%= image_tag post.user.avatar, class:"img-thumbnail r-img-avatar" %>
+            <% else %>
+              <%= image_tag 'd-avatar1.png', class:"img-thumbnail rounded-circle", style:"width: 2rem" %>
+            <% end %>
           <% end %>
-          <span class="fw-bold mx-2"><%= post.user.username %></span>
+          <%= link_to post.user, class:"a-dicoration-none" do %>
+            <span class="fw-bold mx-2 "><%= post.user.username %></span>
+          <% end %>
         </div>
-        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-          ...
-        </button>
+        <div class="dropdown">
+          <button class="btn " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            ...
+          </button>
+          <ul class="dropdown-menu">
+            <% if current_user == post.user %>
+              <li>  <%= button_to 'Delete post',post, class: "dropdown-item" , method: :delete %></li>
+            <% end %>
+            <li><a href="#" class="text-danger dropdown-item td-none">Report</a></li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="card-body ">

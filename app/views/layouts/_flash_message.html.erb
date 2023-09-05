@@ -5,7 +5,6 @@
 <% elsif notice && notice.is_a?(String) %>
   <p class="alert alert-success text-center"><%= notice %></p>
 <% end %>
-
 <% if alert && alert.is_a?(Array)%>
   <% alert.each do |a| %>
     <p class="alert alert-danger text-center"><%= a %></p>
