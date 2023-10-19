@@ -26,7 +26,7 @@
               <li>
                 <div class="d-flex justify-content-between">
                   <div class="d-flex">
-                    <%= image_tag 'd-avatar1.png', class:"img-thumbnail rounded-circle", style:"width: 2.5rem" %>
+                    <%= image_tag fr.follower.avatar.attached? ? fr.follower.avatar : 'd-avatar1.png', class:"img-thumbnail rounded-circle", style:"width: 2.5rem" %>
                     <div class="d-flex flex-column mx-2 justify-content-center">
                       <small class="fw-bold" style="max-width: 5rem; overflow:hidden; white-space: nowrap; text-overflow: ellipsis;"><%= link_to fr.follower, class:"a-dicoration-none" do %><%= fr.follower.username %><% end %></small>
                     </div>

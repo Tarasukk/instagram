@@ -6,7 +6,7 @@
   <% end %>
   <% post.comments.last(3).each do |comment| %>
     <small class="d-block card-text m-0 ">
-      <%= link_to comment.user, class:"a-dicoration-none" do %>
+      <%= link_to comment.user, class:"a-dicoration-none", data: {turbo: 'false'}  do %>
         <span class="fw-bold me-1"><%= comment.user.username %></span>
       <% end %>
       <%= comment.body %>

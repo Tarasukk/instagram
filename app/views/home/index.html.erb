@@ -2,12 +2,10 @@
   <div class="d-flex flex-column gap-3">
     <%= render "story/stories_list" %>
     <div class="flex flex-column">
-      <% @users.each do |user| %>
-        <% user.posts.each do |p|%>
-          <%= render "posts/post", post: p %>
-        <% end %>
+      <% @feeds.each do |p| %>
+        <%= render "posts/post", post: p %>
       <% end %>
     </div>
   </div>
-  <%= render "suggestions/suggestions_list" %>
+  <%= render "suggestions/suggestions_list", suggestions: @suggestions %>
 </div>
